@@ -18,7 +18,6 @@ public class Multithreading {
     public static void optimalThread(MyObject[] shapes) throws InterruptedException {
         int size = shapes.length;
         int cores = Runtime.getRuntime().availableProcessors();
-        System.out.println(cores);
         int range = size/cores;
 
         for (int i = 0; i < cores; i++){
