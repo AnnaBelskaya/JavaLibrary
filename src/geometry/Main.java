@@ -28,7 +28,6 @@ public class Main extends Application {
         primaryStage.setTitle("Main");
         primaryStage.show();
 
-
         new UserActions();
     }
     @Override

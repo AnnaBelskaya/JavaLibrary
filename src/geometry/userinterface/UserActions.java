@@ -65,7 +65,11 @@ public class UserActions extends BasicInterface {
 
         optimal_thread.setOnAction(event -> {
             Main.isActive = true;
-            Multithreading.optimalThread(shapes);
+            try {
+                Multithreading.optimalThread(shapes);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
             single_thread.setDisable(true);
             multy_threads.setDisable(true);
             optimal_thread.setDisable(true);
